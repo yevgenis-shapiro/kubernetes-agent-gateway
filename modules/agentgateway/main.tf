@@ -1,5 +1,4 @@
 
-
 resource "null_resource" "gateway_api_crds" {
   provisioner "local-exec" {
     command = <<-EOT
