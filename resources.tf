@@ -23,24 +23,19 @@ module "nginx" {
   depends_on = [module.metallb]
 }
 
-module "argo" {
-  source = "./modules/argo"
+module "minio" {
+  source = "./modules/minio"
   depends_on = [module.nginx]
+}
+
+module "agentgateway" {
+  source = "./modules/agentgateway"
+  depends_on = [module.minio]
 }
 
 module "argo-events" {
   source = "./modules/argo-events"
-  depends_on = [module.argo]
-}
-
-module "minio" {
-  source = "./modules/minio"
-  depends_on = [module.argo]
-}
-
-module "velero" {
-  source = "./modules/velero"
-  depends_on = [module.minio]
+  depends_on = [module.agentgateway]
 }
 
 
