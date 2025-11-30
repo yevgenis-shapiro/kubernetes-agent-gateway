@@ -1,3 +1,4 @@
+
 resource "helm_release" "minio" {
   name             = "minio"
   namespace        = "default"
