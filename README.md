@@ -38,3 +38,26 @@ kubectl get gateway agentgateway -n kgateway-system
 kubectl get deployment agentgateway -n kgateway-system
 ```
 
+Send a request to the LLM provider API. Verify that the request succeeds and that you get back a response from the chat completion API.
+```
+curl -X POST http://$INGRESS_GW_ADDRESS:8080/ \
+  -H "Content-Type: application/json" \
+    -v \
+    -d '{
+  "jsonrpc": "2.0",
+  "id": "1",
+  "method": "tasks/send",
+  "params": {
+    "id": "1",
+    "message": {
+      "role": "user",
+      "parts": [
+        {
+          "type": "text",
+          "text": "hello gateway!"
+        }
+      ]
+    }
+  }
+  }
+```
