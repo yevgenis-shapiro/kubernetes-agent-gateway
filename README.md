@@ -17,8 +17,8 @@ Agentgateway connects different components of an AI system, including agents, to
 
 🚀 It’s especially helpful for:
 ```
-✅ Developers who need a fast, disposable Kubernetes cluster on their laptop.
-✅ CI pipelines that run Kubernetes integration tests quickly without cloud infrastructure.
+✅ Developers who need a fast, disposable Kubernetes cluster on their laptop .
+✅ Kubernetes integration tests quickly without cloud infrastructure.
 ✅ Testing multi-node setups or Kubernetes features (networking, scheduling, etc.) locally.
 ```
 
@@ -32,5 +32,9 @@ terraform apply -var-file="template.tfvars" -auto-approve
 ```
 
 
-
+🏗️ Verify that the agentgateway proxy is created
+```
+kubectl get gateway agentgateway -n kgateway-system
+kubectl get deployment agentgateway -n kgateway-system
+```
 
