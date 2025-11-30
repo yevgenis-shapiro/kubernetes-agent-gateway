@@ -24,7 +24,6 @@ resource "helm_release" "agentgateway" {
   create_namespace = true
 
   depends_on = [
-    null_resource.gateway_api_crds,
     helm_release.kgateway_crds
   ]
 }
