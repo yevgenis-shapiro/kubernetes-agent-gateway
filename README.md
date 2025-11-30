@@ -5,7 +5,7 @@
 Agentgateway is an open-source "agentic proxy" or intelligent data plane designed to connect, secure, and observe communication between AI agents, tools, and Large Language Models (LLMs). It provides enterprise-grade connectivity for AI systems, addressing the shortcomings of traditional API gateways in agentic environments
 
 
-🧱  Key Features
+🧱  Key Features and Purpose
 ```
 ✔ Connectivity and Interoperability:
 Agentgateway connects different components of an AI system, including agents, tools (like OpenAPI endpoints), and LLM providers, in a scalable and secure way. It supports emerging AI protocols such as the Agent-to-Agent (A2A) and Model Context Protocol (MCP).
