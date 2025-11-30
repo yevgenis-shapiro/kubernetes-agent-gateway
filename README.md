@@ -59,5 +59,5 @@ curl -X POST http://$INGRESS_GW_ADDRESS:8080/ \
       ]
     }
   }
-  }
+  }'
 ```
