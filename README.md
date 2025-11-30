@@ -15,7 +15,7 @@ Agentgateway connects different components of an AI system, including agents, to
 ✔ Dynamic Configuration: It supports dynamic configuration updates via an xDS interface without requiring system downtime.
 ```
 
-🚀 It’s especially helpful for:
+It’s especially helpful for:
 ```
 ✅ Developers who need a fast, disposable Kubernetes cluster on their laptop .
 ✅ Kubernetes integration tests quickly without cloud infrastructure.
@@ -23,7 +23,7 @@ Agentgateway connects different components of an AI system, including agents, to
 ```
 
 
-🏗️ Deployment Options
+🚀 Deployment Options
 ```
 terraform init
 terraform validate
