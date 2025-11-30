@@ -1,21 +1,4 @@
 
-resource "null_resource" "gateway_api_crds" {
-  provisioner "local-exec" {
-    command = <<-EOT
-      kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.4.0/standard-install.yaml
-      kubectl wait --for condition=established --timeout=90s crd/gatewayclasses.gateway.networking.k8s.io
-    EOT
-  }
-
-  provisioner "local-exec" {
-    when    = destroy
-    command = <<-EOT
-      kubectl delete -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.4.0/standard-install.yaml --ignore-not-found=true
-    EOT
-  }
-}
-
-
 resource "helm_release" "kgateway_crds" {
   name              = "kgateway-crds"
   namespace         = "kgateway-system"
