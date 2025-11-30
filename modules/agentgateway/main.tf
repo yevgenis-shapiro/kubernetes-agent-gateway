@@ -53,11 +53,6 @@ resource "helm_release" "kgateway" {
   }
 
   set {
-    name  = "gateway.enabled"
-    value = "true"
-  }
-
-  set {
     name  = "controller.replicas"
     value = "2"
   }
