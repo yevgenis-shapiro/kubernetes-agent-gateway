@@ -18,14 +18,9 @@ module "metallb" {
   kind_cluster_config_path = var.kind_cluster_config_path
 }
 
-module "nginx" {
-  source = "./modules/nginx"
-  depends_on = [module.metallb]
-}
-
 module "minio" {
   source = "./modules/minio"
-  depends_on = [module.nginx]
+  depends_on = [module.metallb]
 }
 
 module "agentgateway" {
